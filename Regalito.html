@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para mi nene ❤️</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #ffd1dc; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h1 {
+      color: #e91e63;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      background-color: #e91e63;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px; 
+    }
+
+    .button:hover {
+      background-color: #c2185b;
+    }
+
+    .options {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .options button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 1rem;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .options button:hover {
+      background-color: #45a049;
+    }
+
+    .options button img {
+      width: 80px; 
+      height: 80px; 
+      margin-right: 15px;
+      border-radius: 10px; 
+      object-fit: cover;
+    }
+
+    .gift-box {
+      cursor: pointer;
+      margin-top: 20px;
+      position: relative;
+      width: 200px; 
+      height: 200px; 
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .gift-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gift-box .message {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #e91e63;
+    }
+
+    .gift-box.open .message {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <div id="congratulations">
+      <h1>Feliz primer San Valentin, Martin ❤️ </h1>
+      <h2>Te quiero aunque seas racista y clasista 🥺</h2>
+      
+      
+      <div class="gift-box" onclick="openGift()">
+        <img id="gift-gif" src="https://i.postimg.cc/HL3czkJJ/simpsons-homero.gif" alt="Gift Box">
+
+
+  
+        <div class="message">Te quiero mucho, lindo 💕</div>
+      </div>
+
+      <button class="button" onclick="showDateOptions()">Tocame 😏</button>
+    </div>
+
+    
+    <div id="date-options" class="options">
+      <h2>Qué hacemos? ❤️ </h2>
+      
+      
+      <button onclick="alert('Hay que cerrar la grieta 🗣️🗣️‼️‼️')">
+        <img src="https://s2-techtudo.glbimg.com/FvVp6C8s9wmFWC2YwdO096XlUXM=/0x0:2400x1708/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2018/K/y/nj1EsBR0ANgvEBN9BWvA/summoners-rift-update-map.png" alt="Lolcito">
+        Cita en la grieta del invocador 😈
+      </button>
+
+    
+      <button onclick="alert('Cita romantica en minecraft <3')">
+        <img src="https://i.pinimg.com/1200x/4e/38/7d/4e387d12e66e8fc38d75ce2b08bd26b8.jpg" alt="Movie">
+        Cita en minecraft 🥵
+      </button>
+
+      
+      <button onclick="alert('Si, es cine 🚬')">
+        <img src="https://e00-mx-marca.uecdn.es/mx/assets/multimedia/imagenes/2023/12/19/17029472209598.jpg" alt="Cine">
+        Ver intelestelar en el cine 🚬
+      </button>
+
+      
+      <button onclick="alert('Cena romantica en La Estación Lynch ❤️')">
+        <img src="https://cdn.5dias.com.py/uploads/estacionnn.jpg" alt="Cenita">
+        Cenita 🍹
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function showDateOptions() {
+      document.getElementById('congratulations').style.display = 'none';
+      document.getElementById('date-options').style.display = 'block';
+    }
+
+    function openGift() {
+      const giftBox = document.querySelector('.gift-box');
+      const giftGif = document.getElementById('gift-gif');
+      giftBox.classList.add('open');
+      
+      
+      giftGif.src = "https://i.postimg.cc/HL3czkJJ/simpsons-homero.gif";
+    }
+  </script>
+</body>
+</html>
